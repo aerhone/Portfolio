@@ -1,57 +1,54 @@
+html {
+    scroll-behavior: smooth !important;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     color: #EEEEEE;
 }
 
-.grid-container {
-    display: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-}
-  
 nav {
-background-color: #393E46;
-overflow: hidden;
-display: flex;
-justify-content: space-between;
-/* position: fixed;
-width: 100%; */
-padding: 0px 30px;
+    background-color: #393E46;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
 }
 
 .navLogo {
-height: 40px;
-margin-top: 5px;
+    height: 40px;
+    margin-top: 5px;
+    padding-left: 30px;
 }
 
 nav > ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 
 }
 
 li {
-float: left;
+    float: left;
 }
 
 li a {
-display: block;
-color: #EEEEEE;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
+    display: block;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 li a:hover {
-background-color: #00ADB5;
+    background-color: #00ADB5;
 }
 
 .hero-container {
-    height: 90vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #222831;
@@ -87,11 +84,17 @@ background-color: #00ADB5;
     display: flex;
     flex-direction: row;
     height: 40px;
+    transition: transform .2s;
+}
+
+.icons > a:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2);
 }
 
 #heroPhotoOne{
     max-width: 100%;
-
     max-height: 80vh;
 }
 
@@ -99,11 +102,177 @@ background-color: #00ADB5;
     align-items: flex-end;
 }
 
-@media (max-width: 768px){
+#skills{
+    background: #EEEEEE;;
+    height: 100vh;
+}
 
+.MySkills{
+    display: flex;
+    justify-content: center;
+}
+
+.MySkills p{
+    font-size: 8vh;
+    font-weight: 800;
+    color: #00ADB5;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+}
+
+.skills{
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.skills img{
+    max-width: 100px;
+    transition: transform .2s;
+}
+
+.skills img:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+}
+
+#About{
+    background-color: #222831;
+    /* height: 100vh; */
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 0px 30px;
+    color: #EEEEEE;
+}
+
+.aboutImage{
+    grid-area: 1 / 1 / 3 / 3;
+    display: flex;
+    align-items: flex-start;
+}
+
+.primaryImage{
+    max-width: auto;
+}
+
+.altImage{
+    display: none;
+}
+
+.about {
+    justify-self: flex-start;
+    color: #00ADB5;
+    font-weight: 800;
+    font-size: 8vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+}
+
+.description{
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    text-align: end;
+    flex-direction: column;
+}
+
+@media (max-width: 513px){
+
+     .hero-container {
+        height: auto;
+        padding-top: 100px;
+    }
+
+    #heroPhotoOne{
+        max-width: 100%;
+       
+    }
+
+    #header p {
+        font-size: 2vh;
+    }
+    
+    .name {
+        font-size: 2vh;
+    }
+
+    #contact {
+        font-size: 2vh;
+    }
+
+    .icons > a{
+        height: 30px;
+    }
+
+    .MySkills p{
+        font-size: 3vh;
+        padding-bottom: 20px;
+    }
+
+    .skills{  
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    #skills{
+        height: auto;
+    }
+
+    .skills img{
+        max-width: 50px;
+    }
+
+    .skills img:hover {
+        -ms-transform: scale(1.25); /* IE 9 */
+        -webkit-transform: scale(1.25); /* Safari 3-8 */
+        transform: scale(1.25);
+    }
+
+   #About{
+        background-color: #222831;
+        display: flex;
+        overflow: visible;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .primaryImage {
+        display: none;
+    }
+
+    .altImage {
+        display: block;
+        max-width: 100%;
+    }
+
+    .description{
+        text-align: start;
+    }
+
+    .about {
+        font-size: 3vh;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 20px;
+    }
+   
+}
+
+@media (max-width: 664px) and (min-width: 514px){
+
+    .navLogo {
+        padding-left: 0px;
+    }
+    
     nav{
-        display: block
-        
+        display: block   
     }
     
     nav img{
@@ -114,24 +283,24 @@ background-color: #00ADB5;
     nav ul {
         display: flex;
         justify-content: center;
+        font-size: 13px;
     }
-    .grid-container {
-        display: 50vh;
-    }
+   
     .hero-container {
-        height: 40vh;
+        height: auto;
+        padding-top: 100px;
     }
+  
+    #heroPhotoOne{
+        max-width: 100%;
+    }
+
     #header p {
         font-size: 2vh;
     }
+    
     .name {
-        color: #00ADB5;
-        font-weight: 800;
         font-size: 3vh;
-    }
-    #heroPhotoOne{
-        max-width: 100%;
-        max-height: 30vh;
     }
 
     #contact {
@@ -140,6 +309,209 @@ background-color: #00ADB5;
 
     .icons > a{
         height: 30px;
+    }
+
+    .MySkills p{
+        font-size: 3vh;
+        padding-bottom: 20px;
+    }
+
+    .skills{  
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    #skills{
+        height: auto;
+    }
+
+    .skills img{
+        max-width: 70px;
+    }
+
+    .skills img:hover {
+        -ms-transform: scale(1.25); /* IE 9 */
+        -webkit-transform: scale(1.25); /* Safari 3-8 */
+        transform: scale(1.25);
+    }
+
+   #About{
+        background-color: #222831;
+        display: flex;
+        overflow: visible;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .primaryImage {
+        display: none;
+    }
+
+    .altImage {
+        display: block;
+        max-width: 100%;
+    }
+
+    .description{
+        text-align: start;
+    }
+
+    .about {
+        font-size: 3vh;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 20px;
+    }
+   
+}
+
+
+@media (max-width: 768px) and (min-width: 665px){
+
+    .hero-container {
+        height: auto;
+        padding-top: 60px;
+    }
+
+    #header p {
+        font-size: 3vh;
+    }
+    
+    .name {
+        color: #00ADB5;
+        font-weight: 800;
+        font-size: 4vh;
+    }
+
+    #heroPhotoOne{
+        max-width: 100%;
+    }
+
+    #contact {
+        font-size: 3vh;
+    }
+
+    #contact p {
+        margin-bottom: 10px;
+    }
+
+    .icons > a{
+        height: 30px;
+    }
+
+    .MySkills p{
+        font-size: 4vh;
+        padding-bottom: 20px;
+    }
+
+    .skills{  
+        height: auto;
+    }
+
+    #skills{
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .skills img{
+        max-width: 70px;
+    }
+
+    .skills img:hover {
+        -ms-transform: scale(1.25); /* IE 9 */
+        -webkit-transform: scale(1.25); /* Safari 3-8 */
+        transform: scale(1.25);
+    }
+
+    #About{
+        background-color: #222831;
+        display: flex;
+        overflow: visible;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .primaryImage {
+        display: none;
+    }
+
+    .altImage {
+        display: block;
+        max-width: 100%;
+    }
+
+    .description{
+        text-align: start;
+    }
+
+    .about {
+        font-size: 4vh;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 20px;
+    }
+
+}
+
+@media (max-width: 1200px) and (min-width:769px){
+    
+    .hero-container {
+        height: auto;
+        padding-top: 60px;
+    }
+
+    #header p {
+        font-size: 3vh;
+    }
+    
+    .name {
+        color: #00ADB5;
+        font-weight: 800;
+        font-size: 4vh;
+    }
+
+    #heroPhotoOne{
+        max-width: 100%;
+    }
+
+    #contact {
+        font-size: 3vh;
+    }
+
+    #contact p {
+        margin-bottom: 10px;
+    }
+
+    .icons > a{
+        height: 30px;
+    }
+
+    .MySkills p{
+        font-size: 4vh;
+        padding-bottom: 20px;
+    }
+
+    .skills{  
+        height: auto;
+    }
+
+    #skills{
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .skills img{
+        max-width: 70px;
+    }
+
+    .skills img:hover {
+        -ms-transform: scale(1.25); /* IE 9 */
+        -webkit-transform: scale(1.25); /* Safari 3-8 */
+        transform: scale(1.25);
+    }
+    
+    .about{
+        font-size: 4vh;
     }
 }
 

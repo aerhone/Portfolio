@@ -1034,3 +1034,345 @@ form textarea{
     }
 }
 
+/* For iphone 14 pro max */
+@media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3){
+
+    .navLogo {
+        padding-left: 0px;
+    }
+    
+    nav{
+        display: block   
+    }
+    
+    nav img{
+        display: block;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+    }
+   
+    .hero-container {
+        height: auto;
+        padding-top: 100px;
+    }
+  
+    #heroPhotoOne{
+        max-width: 70%;
+    }
+
+    #header p {
+        font-size: 13px;
+    }
+    
+    .name {
+        font-size: 20px;
+    }
+
+    #contact {
+        font-size: 13px;
+        padding-bottom: 10px;
+    }
+
+    .icons > a{
+        height: 30px;
+    }
+
+    .resume{
+        height: 30px;
+        width: 150px;
+    }
+
+    .resume a p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .resume a p {
+        font-size: 15px;
+    }
+
+    .MySkills p{
+        font-size: 26px;
+        padding-bottom: 20px;
+    }
+
+    .skills{  
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    #skills{
+        height: auto;
+    }
+
+    .skills img{
+        max-width: 50px;
+    }
+
+    .skills img:hover {
+        -ms-transform: scale(1.25); /* IE 9 */
+        -webkit-transform: scale(1.25); /* Safari 3-8 */
+        transform: scale(1.25);
+    }
+
+   #About{
+        background-color: #222831;
+        display: flex;
+        overflow: visible;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .primaryImage {
+        display: none;
+    }
+
+    .altImage {
+        display: block;
+        max-width: 100%;
+    }
+
+    .description{
+        text-align: start;
+    }
+
+    .about {
+        font-size: 26px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 20px;
+    }
+
+    #Contact{
+        display: flex;
+        flex-direction: column;  
+    }
+    
+    #Contact .Contact{
+        font-size: 26px;
+    }
+    
+    .form-container{
+        margin-bottom: 20px;
+    }
+    
+    .contact-container{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 20px;
+    }
+    
+    .profile{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 10px;
+        align-items: center;
+    }
+
+    .profile p{
+        font-size: 13px;
+    }
+    
+    .address img{
+        height: 30px;
+    }
+
+    .address {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    address{
+        font-size: 13px;
+    }
+    
+    .socials {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .socials p {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+}
+
+/* For iphone 11 */
+@media only screen and (width: 414px) and (height: 896px) and (-webkit-device-pixel-ratio: 2){
+    
+    .navLogo {
+        padding-left: 0px;
+    }
+    
+    nav{
+        display: block   
+    }
+    
+    nav img{
+        display: block;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+    }
+   
+    .hero-container {
+        height: auto;
+        padding-top: 100px;
+    }
+  
+    #heroPhotoOne{
+        max-width: 70%;
+    }
+
+    #header p {
+        font-size: 13px;
+    }
+    
+    .name {
+        font-size: 20px;
+    }
+
+    #contact {
+        font-size: 13px;
+        padding-bottom: 10px;
+    }
+
+    .icons > a{
+        height: 30px;
+    }
+
+    .resume{
+        height: 30px;
+        width: 150px;
+    }
+
+    .resume a p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .resume a p {
+        font-size: 15px;
+    }
+
+    .MySkills p{
+        font-size: 26px;
+        padding-bottom: 20px;
+    }
+
+    .skills{  
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    #skills{
+        height: auto;
+    }
+
+    .skills img{
+        max-width: 50px;
+    }
+
+    .skills img:hover {
+        -ms-transform: scale(1.25); /* IE 9 */
+        -webkit-transform: scale(1.25); /* Safari 3-8 */
+        transform: scale(1.25);
+    }
+
+   #About{
+        background-color: #222831;
+        display: flex;
+        overflow: visible;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .primaryImage {
+        display: none;
+    }
+
+    .altImage {
+        display: block;
+        max-width: 100%;
+    }
+
+    .description{
+        text-align: start;
+    }
+
+    .about {
+        font-size: 26px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 20px;
+    }
+
+    #Contact{
+        display: flex;
+        flex-direction: column;  
+    }
+    
+    #Contact .Contact{
+        font-size: 26px;
+    }
+    
+    .form-container{
+        margin-bottom: 20px;
+    }
+    
+    .contact-container{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 20px;
+    }
+    
+    .profile{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 10px;
+        align-items: center;
+    }
+
+    .profile p{
+        font-size: 13px;
+    }
+    
+    .address img{
+        height: 30px;
+    }
+
+    .address {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    address{
+        font-size: 13px;
+    }
+    
+    .socials {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .socials p {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+ 
+}

@@ -80,14 +80,14 @@ li a:hover {
 
 .icons {
     display: flex;
-    flex-direction: row;
+/*     flex-direction: row; */
     gap: 10px;
     padding-bottom: 10px;
 }
 
 .icons > a{
     display: flex;
-    flex-direction: row;
+/*     flex-direction: row; */
     height: 40px;
     transition: transform .2s;
 }

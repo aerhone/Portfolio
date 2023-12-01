@@ -75,19 +75,20 @@ li a:hover {
 }
 
 #contact {
-    font-size: 20px;
+    font-size: 20px;   
+    display: flex;
+    flex-direction: column;
 }
 
 .icons {
     display: flex;
-/*     flex-direction: row; */
     gap: 10px;
     padding-bottom: 10px;
+    flex-wrap: wrap;
+    height: auto;
 }
 
-.icons > a{
-    display: flex;
-/*     flex-direction: row; */
+.icons > a img{
     height: 40px;
     transition: transform .2s;
 }
@@ -135,8 +136,10 @@ li a:hover {
 }
 
 #skills{
-    background: #EEEEEE;;
-    height: 100vh;
+    background: #EEEEEE;
+    /* height: 100vh; */
+    padding-bottom: 40px;
+    
 }
 
 .MySkills{
@@ -156,7 +159,7 @@ li a:hover {
 .skills{
     display: flex;
     justify-content: center;
-    height: 80vh;
+    /* height: 80vh; */
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
@@ -359,7 +362,7 @@ form textarea{
         padding-bottom: 10px;
     }
 
-    .icons > a{
+    .icons > a img{
         height: 20px;
     }
 
@@ -532,7 +535,7 @@ form textarea{
         padding-bottom: 10px;
     }
 
-    .icons > a{
+    .icons > a img{
         height: 30px;
     }
 
@@ -703,7 +706,7 @@ form textarea{
         padding-bottom: 10px;
     }
 
-    .icons > a{
+    .icons > a img{
         height: 30px;
     }
 
@@ -854,7 +857,7 @@ form textarea{
         font-size: 18px;
     }
 
-    .icons > a{
+    .icons > a img{
         height: 30px;
     }
 
@@ -1008,7 +1011,7 @@ form textarea{
     .skills{
         display: flex;
         justify-content: center;
-        height: 80vh;
+        /* height: 80vh; */
         align-items: center;
         flex-wrap: wrap;
         gap: 30px;
@@ -1078,7 +1081,7 @@ form textarea{
         padding-bottom: 10px;
     }
 
-    .icons > a{
+    .icons > a img{
         height: 30px;
     }
 
@@ -1203,11 +1206,12 @@ form textarea{
         margin-top: 10px;
         font-size: 13px;
     }
+
 }
 
 /* For iphone 11 */
 @media only screen and (width: 414px) and (height: 896px) and (-webkit-device-pixel-ratio: 2){
-    
+   
     .navLogo {
         padding-left: 0px;
     }
@@ -1249,7 +1253,7 @@ form textarea{
         padding-bottom: 10px;
     }
 
-    .icons > a{
+    .icons > a img{
         height: 30px;
     }
 
@@ -1374,6 +1378,6 @@ form textarea{
         margin-top: 10px;
         font-size: 13px;
     }
+
  
 }
-

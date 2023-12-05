@@ -8,19 +8,27 @@ body {
     color: #EEEEEE;
 }
 
-nav {
+.container{
+    padding: 0px 5rem;
+}
+
+#Navi{
     background-color: #393E46;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav{
     display: flex;
     justify-content: space-between;
-    position: fixed;
-    width: 100%;
 }
 
 .navLogo {
     height: 40px;
     margin-top: 5px;
-    padding-left: 30px;
 }
 
 nav > ul {
@@ -47,14 +55,14 @@ li a:hover {
     background-color: #00ADB5;
 }
 
-.hero-container {
+.hero{
     height: 100vh;
     display: grid;
     color: #EEEEEE;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     background-color: #222831;
-    padding: 0px 30px;
+
 }
 
 .item {
@@ -66,13 +74,14 @@ li a:hover {
     flex-direction: column;
 }
 
-#header p {
+.header p {
     font-size: 20px;
 }
+
 .name {
     color: #00ADB5;
     font-weight: 800;
-    font-size: 60px;
+    font-size: 75px;
 }
 
 #contact {
@@ -130,7 +139,7 @@ li a:hover {
 
 #heroPhotoOne{
     max-width: 100%;
-    max-height: 80vh;
+    max-height: 90vh;
 }
 
 .photos {
@@ -140,9 +149,8 @@ li a:hover {
 
 #skills{
     background: #EEEEEE;
-    /* height: 100vh; */
-    padding-bottom: 40px;
-    
+    height: 100vh;
+    padding-top: 2rem;    
 }
 
 .MySkills{
@@ -150,19 +158,10 @@ li a:hover {
     justify-content: center;
 }
 
-.MySkills p{
-    font-size: 60px;
-    font-weight: 800;
-    color: #00ADB5;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-top: 20px;
-}
-
 .skills{
     display: flex;
     justify-content: center;
-    /* height: 80vh; */
+    height: 80vh;
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
@@ -179,14 +178,57 @@ li a:hover {
     transform: scale(1.5);
 }
 
+#project{
+    background: #EEEEEE;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.label{
+    font-size: 60px;
+    font-weight: 800;
+    color: #00ADB5;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 2rem;
+    padding-bottom: 20px;
+}
+
+.project{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+
+.project > a img{
+    max-width: 100%;
+    border-radius: 12px;
+    transition: transform 10s;
+}
+
+.project > a:hover {
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    transform: scale(1.05);
+}
+
+.projectDescription{
+    color: #393E46;
+    font-size: 20px;
+}
+
 #About{
     background-color: #222831;
-    /* height: 100vh; */
     overflow: hidden;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.About{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    padding: 0px 30px;
     color: #EEEEEE;
 }
 
@@ -204,41 +246,32 @@ li a:hover {
     display: none;
 }
 
-.about {
-    justify-self: flex-start;
-    color: #00ADB5;
-    font-weight: 800;
-    font-size: 60px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-top: 20px;
-}
-
 .description{
     grid-area: 1 / 2 / 2 / 3;
     display: flex;
     text-align: end;
     flex-direction: column;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 #Contact{
     background-color: #222831;
-    padding: 20px 30px;
+    padding-top: 2rem;
     color: #EEEEEE;
+    padding-bottom: 2rem;
+    
+}
+
+.form{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    column-gap: 20px;
-    
+    column-gap: 20px;   
 }
 
 #Contact .Contact{
     grid-column: span 2;
-    color: #00ADB5;
-    font-weight: 800;
-    font-size: 60px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .form-container{
@@ -314,7 +347,7 @@ form textarea{
     color: #EEEEEE;
     display: flex;
     justify-content: center;
-    height: 20px;
+    padding: 1rem 0;
     align-items: center;
 }
 
@@ -322,55 +355,53 @@ form textarea{
     margin: 0px;
 }
 
-@media (max-width:390px){
+@media (max-width:575px){
 
-    .navLogo {
-        padding-left: 0px;
-    }
-    
-    nav{
-        display: block   
-    }
-    
-    nav img{
-        display: block;
-        margin: 0 auto;
+    .container{
+        padding: 0px 2rem;
     }
 
-    nav ul {
+    .nav{
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        font-size: 13px;
-    }
-   
-    .hero-container {
-        height: auto;
-        padding-top: 100px;
+        align-items: center;
+        padding: 0px 1rem !important;
     }
 
-    .header {
+    li a {
+        font-size: 15px;
+        padding: 10px 5px;
+    }
+
+    .header p {
+        font-size: 15px;
+    }
+
+    .label{
+        font-size: 30px;
+    }
+
+    .hero{
+        height: auto;
+        padding-top: 6rem;
+    }
+
+    .header{
         grid-area: 1 / 1 / 2 / 3;
     }
 
     .photos {
         grid-area: 2 / 2 / 3 / 3;
     }
-  
-    #heroPhotoOne{
-        max-width: 100%;
-    }
 
-    #header p {
-        font-size: 13px;
-    }
-    
     .name {
-        font-size: 19px;
+        font-size: 23px;
     }
 
     #contact {
-        font-size: 13px;
-        padding-bottom: 10px;
+        font-size: 15px;
+        justify-content: center;
     }
 
     .icons > a img{
@@ -382,1192 +413,286 @@ form textarea{
         width: 110px;
     }
 
-    .resume a p {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    .resume a p {
-        font-size: 12px;
-    }
-
-
-    .MySkills p{
-        font-size: 26px;
-        padding-bottom: 20px;
-    }
-
-    .skills{  
-        height: auto;
-        padding-bottom: 20px;
+    .resume p{
+        font-size: 10px;
     }
 
     #skills{
         height: auto;
-        padding-bottom: 0px;
-    }
-
-    .skills img{
-        max-width: 40px;
-    }
-
-    .skills img:hover {
-        -ms-transform: scale(1.25); /* IE 9 */
-        -webkit-transform: scale(1.25); /* Safari 3-8 */
-        transform: scale(1.25);
-    }
-
-   #About{
-        background-color: #222831;
-        display: flex;
-        overflow: visible;
-        height: auto;
-        flex-direction: column-reverse;
-    }
-
-    .primaryImage {
-        display: none;
-    }
-
-    .altImage {
-        display: block;
-        max-width: 100%;
-    }
-
-    .description{
-        text-align: start;
-    }
-
-    .about {
-        font-size: 26px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 20px;
-    }
-
-    #Contact{
-        display: flex;
-        flex-direction: column;  
-    }
-    
-    #Contact .Contact{
-        font-size: 26px;
-    }
-    
-    .form-container{
-        margin-bottom: 20px;
-    }
-    
-    .contact-container{
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        grid-template-rows: auto;
-        column-gap: 20px;
-    }
-    
-    .profile{
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 10px;
-        align-items: center;
-    }
-
-    .profile p{
-        font-size: 13px;
-    }
-    
-    .address img{
-        height: 20px;
-    }
-
-    .address {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    address{
-        font-size: 13px;
-    }
-    
-    .socials {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .socials p {
-        margin-top: 10px;
-        font-size: 13px;
-    }
-   
-   
-
-}
-
-@media (max-width: 408px) and (min-width: 391px){
-
-    .navLogo {
-        padding-left: 0px;
-    }
-    
-    nav{
-        display: block   
-    }
-    
-    nav img{
-        display: block;
-        margin: 0 auto;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: center;
-        font-size: 13px;
-    }
-   
-    .hero-container {
-        height: auto;
-        padding-top: 100px;
-    }
-  
-    #heroPhotoOne{
-        max-width: 100%;
-    }
-
-    #header p {
-        font-size: 13px;
-    }
-    
-    .name {
-        font-size: 19px;
-    }
-
-    #contact {
-        font-size: 13px;
-        padding-bottom: 10px;
-    }
-
-    .icons > a img{
-        height: 20px;
-    }
-
-    .resume{
-        height: 20px;
-        width: 110px;
-    }
-
-    .resume a p {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    .resume a p {
-        font-size: 12px;
-    }
-
-
-    .MySkills p{
-        font-size: 26px;
-        padding-bottom: 20px;
-    }
-
-    .skills{  
-        height: auto;
-        padding-bottom: 20px;
-    }
-
-    #skills{
-        height: auto;
-        padding-bottom: 0px;
-    }
-
-    .skills img{
-        max-width: 40px;
-    }
-
-    .skills img:hover {
-        -ms-transform: scale(1.25); /* IE 9 */
-        -webkit-transform: scale(1.25); /* Safari 3-8 */
-        transform: scale(1.25);
-    }
-
-   #About{
-        background-color: #222831;
-        display: flex;
-        overflow: visible;
-        height: auto;
-        flex-direction: column-reverse;
-    }
-
-    .primaryImage {
-        display: none;
-    }
-
-    .altImage {
-        display: block;
-        max-width: 100%;
-    }
-
-    .description{
-        text-align: start;
-    }
-
-    .about {
-        font-size: 26px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 20px;
-    }
-
-    #Contact{
-        display: flex;
-        flex-direction: column;  
-    }
-    
-    #Contact .Contact{
-        font-size: 26px;
-    }
-    
-    .form-container{
-        margin-bottom: 20px;
-    }
-    
-    .contact-container{
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        grid-template-rows: auto;
-        column-gap: 20px;
-    }
-    
-    .profile{
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 10px;
-        align-items: center;
-    }
-
-    .profile p{
-        font-size: 13px;
-    }
-    
-    .address img{
-        height: 20px;
-    }
-
-    .address {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    address{
-        font-size: 13px;
-    }
-    
-    .socials {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .socials p {
-        margin-top: 10px;
-        font-size: 13px;
-    }
-   
-   
-}
-
-@media (max-width: 512px) and (min-width: 409px){
-
-    .navLogo {
-        padding-left: 0px;
-    }
-    
-    nav{
-        display: block   
-    }
-    
-    nav img{
-        display: block;
-        margin: 0 auto;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: center;
-        font-size: 13px;
-    }
-   
-    .hero-container {
-        height: auto;
-        padding-top: 95px;
-    }
-  
-    #heroPhotoOne{
-        max-width: 100%;
-    }
-
-    #header p {
-        font-size: 13px;
-    }
-    
-    .name {
-        font-size: 20px;
-    }
-
-    #contact {
-        font-size: 13px;
-        padding-bottom: 10px;
-    }
-
-    .icons > a img{
-        height: 30px;
-    }
-
-    .resume{
-        height: 30px;
-        width: 150px;
-    }
-
-    .resume a p {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    .resume a p {
-        font-size: 15px;
-    }
-
-    .MySkills p{
-        font-size: 26px;
-        padding-bottom: 20px;
-    }
-
-    .skills{  
-        height: auto;
-        padding-bottom: 20px;
-    }
-
-    #skills{
-        height: auto;
-        padding-bottom: 0px;
-    }
-
-    .skills img{
-        max-width: 50px;
-    }
-
-    .skills img:hover {
-        -ms-transform: scale(1.25); /* IE 9 */
-        -webkit-transform: scale(1.25); /* Safari 3-8 */
-        transform: scale(1.25);
-    }
-
-   #About{
-        background-color: #222831;
-        display: flex;
-        overflow: visible;
-        height: auto;
-        flex-direction: column-reverse;
-    }
-
-    .primaryImage {
-        display: none;
-    }
-
-    .altImage {
-        display: block;
-        max-width: 100%;
-    }
-
-    .description{
-        text-align: start;
-    }
-
-    .about {
-        font-size: 26px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 20px;
-    }
-
-    #Contact{
-        display: flex;
-        flex-direction: column;  
-    }
-    
-    #Contact .Contact{
-        font-size: 26px;
-    }
-    
-    .form-container{
-        margin-bottom: 20px;
-    }
-    
-    .contact-container{
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        grid-template-rows: auto;
-        column-gap: 20px;
-    }
-    
-    .profile{
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 10px;
-        align-items: center;
-    }
-
-    .profile p{
-        font-size: 13px;
-    }
-    
-    .address img{
-        height: 30px;
-    }
-
-    .address {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    address{
-        font-size: 13px;
-    }
-    
-    .socials {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .socials p {
-        margin-top: 10px;
-        font-size: 13px;
-    }
-   
-}
-
-@media (max-width: 664px) and (min-width: 513px){
-
-    .navLogo {
-        padding-left: 0px;
-    }
-    
-    nav{
-        display: block   
-    }
-    
-    nav img{
-        display: block;
-        margin: 0 auto;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: center;
-        font-size: 13px;
-    }
-   
-    .hero-container {
-        height: auto;
-        padding-top: 95px;
-    }
-  
-    #heroPhotoOne{
-        max-width: 100%;
-    }
-
-    #header p {
-        font-size: 18px;
-    }
-    
-    .name {
-        font-size: 26px;
-    }
-
-    #contact {
-        font-size: 18px;
-        padding-bottom: 10px;
-    }
-
-    .icons > a img{
-        height: 30px;
-    }
-
-    .resume{
-        height: 30px;
-        width: 150px;
-    }
-
-    .resume a p {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    .resume a p {
-        font-size: 15px;
-    }
-
-    .MySkills p{
-        font-size: 26px;
-        padding-bottom: 20px;
-    }
-
-    .skills{  
-        height: auto;
-        padding-bottom: 20px;
-    }
-
-    #skills{
-        height: auto;
-        padding-bottom: 0px;
-    }
-
-    .skills img{
-        max-width: 70px;
-    }
-
-    .skills img:hover {
-        -ms-transform: scale(1.25); /* IE 9 */
-        -webkit-transform: scale(1.25); /* Safari 3-8 */
-        transform: scale(1.25);
-    }
-
-   #About{
-        background-color: #222831;
-        display: flex;
-        overflow: visible;
-        height: auto;
-        flex-direction: column-reverse;
-    }
-
-    .primaryImage {
-        display: none;
-    }
-
-    .altImage {
-        display: block;
-        max-width: 100%;
-    }
-
-    .description{
-        text-align: start;
-    }
-
-    .about {
-        font-size: 26px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 20px;
-    }
-
-    #Contact{
-        display: flex;
-        flex-direction: column;  
-    }
-    
-    #Contact .Contact{
-        font-size: 26px;
-    }
-    
-    .form-container{
-        margin-bottom: 20px;
-    }
-    
-    .contact-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    .profile{
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 10px;
-        align-items: center;
-    }
-
-    .profile p{
-        font-size: 13px;
-    }
-    
-    address {
-        font-size: 13px;
-    }
-    .address img{
-        height: 30px;
-    }
-
-    .address {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-    
-    .socials {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .socials p{
-        margin-top: 0px;
-        font-size: 13px;
-    }
-   
-}
-
-@media (max-width: 768px) and (min-width: 665px){
-
-    .hero-container {
-        height: auto;
-        padding-top: 60px;
-    }
-
-    #header p {
-        font-size: 18px;
-    }
-    
-    .name {
-        color: #00ADB5;
-        font-weight: 800;
-        font-size: 34px;
-    }
-
-    #heroPhotoOne{
-        max-width: 80%;
-    }
-
-    #contact {
-        font-size: 18px;
-    }
-
-    .icons > a img{
-        height: 30px;
-    }
-
-    .resume{
-        height: 30px;
-        width: 150px;
-    }
-
-    .resume a p {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    .resume a p {
-        font-size: 15px;
-    }
-
-    .MySkills p{
-        font-size: 34px;
-        padding-bottom: 20px;
-    }
-
-    .skills{  
-        height: auto;
-    }
-
-    #skills{
-        height: auto;
-        padding-bottom: 20px;
-    }
-
-    .skills img{
-        max-width: 70px;
-    }
-
-    .skills img:hover {
-        -ms-transform: scale(1.25); /* IE 9 */
-        -webkit-transform: scale(1.25); /* Safari 3-8 */
-        transform: scale(1.25);
-    }
-
-    #About{
-        background-color: #222831;
-        display: flex;
-        overflow: visible;
-        height: auto;
-        flex-direction: column-reverse;
-    }
-
-    .primaryImage {
-        display: none;
-    }
-
-    .altImage {
-        display: block;
-        max-width: 100%;
-    }
-
-    .description{
-        text-align: start;
-        font-size: 16px;
-    }
-
-    .about {
-        font-size: 34px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 20px;
-    }
-
-    #Contact{
-        display: flex;
-        flex-direction: column;
-        
-    }
-    
-    #Contact .Contact{
-        font-size: 34px;
-    }
-    
-    .form-container{
-        margin-bottom: 20px;
-    }
-
-    .contact-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    .profile{
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 10px;
-        align-items: center;
-    }
-    
-    .address img{
-        height: 30px;
-    }
-
-    .address {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-    
-    .socials {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-}
-
-@media (max-width: 1200px) and (min-width:769px){
-    
-    .hero-container {
-        height: auto;
-        padding-top: 60px;
-    }
-
-    #header p {
-        font-size: 18px;
-    }
-    
-    .name {
-        color: #00ADB5;
-        font-weight: 800;
-        font-size: 50px;
-    }
-
-    #heroPhotoOne{
-        max-width: 100%;
-    }
-
-    #contact {
-        font-size: 18px;
-    }
-
-    .resume a p {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    .MySkills p{
-        font-size: 50px;
-        padding-bottom: 20px;
+        padding-top: 4rem;    
     }
 
     .skills{
-        display: flex;
-        justify-content: center;
-        /* height: 80vh; */
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-
-    .skills img{
-        max-width: 100px;
-        transition: transform .2s;
-    }
-
-    .skills img:hover {
-        -ms-transform: scale(1.5); /* IE 9 */
-        -webkit-transform: scale(1.5); /* Safari 3-8 */
-        transform: scale(1.5);
+        height: auto;
     }
     
-    .about{
+    .skills img{
+        max-width: 44px;
+    }
+
+    #project{
+        padding-top: 4rem;
+    }
+
+    .project{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projectDescription p{
+        font-size: 15px;
+
+    }
+
+    #About{
+        padding-top: 4rem;
+    }
+
+    .About{
+        display: flex;
+        flex-direction: column-reverse;
+        color: #EEEEEE;
+    }
+
+    .primaryImage{
+        display: none;
+    }
+    
+    .altImage{
+        display: block;
+        max-width: 100%;
+    }
+
+    .description{
+        text-align: start;
+        font-size: 15px;
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;  
+    }
+
+    .contact-container{
+        padding-top: 2rem;
+    }
+
+    .profile {
+        font-size: 15px;
+    }
+
+    .address img{
+        height: 20px;
+    }
+
+    .address{
+        align-items:flex-start;
+    }
+
+    .socials{
+        align-items:flex-start;
+        font-size: 15px;
+    }
+
+
+}
+
+@media (min-width:576px) and (max-width:767px){
+
+    .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li a {
+        font-size: 15px;
+    }
+
+    .header p {
+        font-size: 15px;
+    }
+
+    .label{
+        font-size: 40px;
+    }
+
+    .hero{
+        height: auto;
+        padding-top: 6rem;
+    }
+
+    .name {
+        font-size: 23px;
+    }
+
+    #contact {
+        font-size: 15px;
+    }
+
+    .icons > a img{
+        height: 30px;
+    }
+
+    .resume{
+        height: 30px;
+        width: 150px;
+    }
+
+    #skills{
+        height: auto;
+        padding-top: 4rem;    
+    }
+
+    .skills{
+        height: auto;
+    }
+    
+    .skills img{
+        max-width: 60px;
+    }
+
+    #project{
+        padding-top: 4rem;
+    }
+
+    .project{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projectDescription p{
+        font-size: 15px;
+
+    }
+
+    #About{
+        padding-top: 4rem;
+    }
+
+    .About{
+        display: flex;
+        flex-direction: column-reverse;
+        color: #EEEEEE;
+    }
+
+    .primaryImage{
+        display: none;
+    }
+    
+    .altImage{
+        display: block;
+        max-width: 100%;
+    }
+
+    .description{
+        text-align: start;
+        font-size: 15px;
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;  
+    }
+
+    .contact-container{
+        padding-top: 2rem;
+    }
+
+    .profile {
+        font-size: 15px;
+    }
+
+    .address img{
+        height: 30px;
+    }
+
+    .address{
+        align-items:flex-start;
+    }
+
+    .socials{
+        align-items:flex-start;
+        font-size: 15px;
+    }
+
+
+
+}
+
+@media (min-width:768px) and (max-width:991px){
+
+    .header p {
+        font-size: 18px;
+    }
+
+    .label{
         font-size: 50px;
     }
 
-    .description {
-        font-size: 16px;
+    .hero{
+        height: auto;
+        padding-top: 5rem;
     }
+
+    .name {
+        font-size: 34px;
+    }
+
+    .project{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projectDescription{
+        font-size: 18px;
+    }
+
+    #contact {
+        font-size: 18px;
+    }
+
+
+    .About{
+        display: flex;
+        flex-direction: column-reverse;
+        color: #EEEEEE;
+    }
+
+    .primaryImage{
+        display: none;
+    }
+    
+    .altImage{
+        display: block;
+        max-width: 100%;
+    }
+
+    .description{
+        text-align: start;
+        font-size: 18px;
+    }
+
+
 }
+
+@media (min-width:992px) and (max-width:1199px){
+
+    .name {
+        font-size: 47px;
+    }
+
+}
+
 
 /* For iphone 14 pro max */
 @media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3){
 
-    .navLogo {
-        padding-left: 0px;
-    }
-    
-    nav{
-        display: block   
-    }
-    
-    nav img{
-        display: block;
-        margin: 0 auto;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: center;
-        font-size: 13px;
-    }
-   
-    .hero-container {
-        height: auto;
-        padding-top: 95px;
-    }
-  
-    #heroPhotoOne{
-        max-width: 100%;
-    }
-
-    #header p {
-        font-size: 13px;
-    }
-    
-    .name {
-        font-size: 20px;
-    }
-
-    #contact {
-        font-size: 13px;
-        padding-bottom: 10px;
-    }
-
-    .icons > a img{
-        height: 30px;
-    }
-
-    .resume{
-        height: 30px;
-        width: 150px;
-    }
-
-    .resume a p {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    .resume a p {
-        font-size: 15px;
-    }
-
-    .MySkills p{
-        font-size: 26px;
-        padding-bottom: 20px;
-    }
-
-    .skills{  
-        height: auto;
-        padding-bottom: 20px;
-    }
-
-    #skills{
-        height: auto;
-        padding-bottom: 0px;
-    }
-
-    .skills img{
-        max-width: 50px;
-    }
-
-    .skills img:hover {
-        -ms-transform: scale(1.25); /* IE 9 */
-        -webkit-transform: scale(1.25); /* Safari 3-8 */
-        transform: scale(1.25);
-    }
-
-   #About{
-        background-color: #222831;
-        display: flex;
-        overflow: visible;
-        height: auto;
-        flex-direction: column-reverse;
-    }
-
-    .primaryImage {
-        display: none;
-    }
-
-    .altImage {
-        display: block;
-        max-width: 100%;
-    }
-
-    .description{
-        text-align: start;
-    }
-
-    .about {
-        font-size: 26px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 20px;
-    }
-
-    #Contact{
-        display: flex;
-        flex-direction: column;  
-    }
-    
-    #Contact .Contact{
-        font-size: 26px;
-    }
-    
-    .form-container{
-        margin-bottom: 20px;
-    }
-    
-    .contact-container{
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        grid-template-rows: auto;
-        column-gap: 20px;
-    }
-    
-    .profile{
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 10px;
-        align-items: center;
-    }
-
-    .profile p{
-        font-size: 13px;
-    }
-    
-    .address img{
-        height: 30px;
-    }
-
-    .address {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    address{
-        font-size: 13px;
-    }
-    
-    .socials {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .socials p {
-        margin-top: 10px;
-        font-size: 13px;
-    }
-   
 }
 
 /* For iphone 11 */
 @media only screen and (width: 414px) and (height: 896px) and (-webkit-device-pixel-ratio: 2){
   
-    .navLogo {
-        padding-left: 0px;
-    }
-    
-    nav{
-        display: block   
-    }
-    
-    nav img{
-        display: block;
-        margin: 0 auto;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: center;
-        font-size: 13px;
-    }
-   
-    .hero-container {
-        height: auto;
-        padding-top: 95px;
-    }
-  
-    #heroPhotoOne{
-        max-width: 100%;
-    }
-
-    #header p {
-        font-size: 13px;
-    }
-    
-    .name {
-        font-size: 20px;
-    }
-
-    #contact {
-        font-size: 13px;
-        padding-bottom: 10px;
-    }
-
-    .icons > a img{
-        height: 30px;
-    }
-
-    .resume{
-        height: 30px;
-        width: 150px;
-    }
-
-    .resume a p {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    .resume a p {
-        font-size: 15px;
-    }
-
-    .MySkills p{
-        font-size: 26px;
-        padding-bottom: 20px;
-    }
-
-    .skills{  
-        height: auto;
-        padding-bottom: 20px;
-    }
-
-    #skills{
-        height: auto;
-        padding-bottom: 0px;
-    }
-
-    .skills img{
-        max-width: 50px;
-    }
-
-    .skills img:hover {
-        -ms-transform: scale(1.25); /* IE 9 */
-        -webkit-transform: scale(1.25); /* Safari 3-8 */
-        transform: scale(1.25);
-    }
-
-   #About{
-        background-color: #222831;
-        display: flex;
-        overflow: visible;
-        height: auto;
-        flex-direction: column-reverse;
-    }
-
-    .primaryImage {
-        display: none;
-    }
-
-    .altImage {
-        display: block;
-        max-width: 100%;
-    }
-
-    .description{
-        text-align: start;
-    }
-
-    .about {
-        font-size: 26px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 20px;
-    }
-
-    #Contact{
-        display: flex;
-        flex-direction: column;  
-    }
-    
-    #Contact .Contact{
-        font-size: 26px;
-    }
-    
-    .form-container{
-        margin-bottom: 20px;
-    }
-    
-    .contact-container{
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        grid-template-rows: auto;
-        column-gap: 20px;
-    }
-    
-    .profile{
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 10px;
-        align-items: center;
-    }
-
-    .profile p{
-        font-size: 13px;
-    }
-    
-    .address img{
-        height: 30px;
-    }
-
-    .address {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    address{
-        font-size: 13px;
-    }
-    
-    .socials {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .socials p {
-        margin-top: 10px;
-        font-size: 13px;
-    }
    
 }

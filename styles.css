@@ -428,7 +428,7 @@ form textarea{
 
     #skills{
         height: auto;
-        padding-top: 4rem;    
+        padding: 4rem 0;    
     }
 
     .skills{
@@ -477,9 +477,17 @@ form textarea{
         font-size: 15px;
     }
 
+    #Contact{
+        padding-top: 4rem;
+    }
+
     .form{
         display: flex;
         flex-direction: column;  
+    }
+
+    #submit{
+        width: 100%;
     }
 
     .contact-container{
@@ -502,7 +510,6 @@ form textarea{
         align-items:flex-start;
         font-size: 15px;
     }
-
 
 }
 
@@ -551,7 +558,7 @@ form textarea{
 
     #skills{
         height: auto;
-        padding-top: 4rem;    
+        padding: 4rem 0;    
     }
 
     .skills{
@@ -572,7 +579,7 @@ form textarea{
     }
 
     .projectDescription p{
-        font-size: 15px;
+        font-size: 16px;
 
     }
 
@@ -597,7 +604,11 @@ form textarea{
 
     .description{
         text-align: start;
-        font-size: 15px;
+        font-size: 16px;
+    }
+
+    #Contact{
+        padding-top: 4rem;
     }
 
     .form{
@@ -605,12 +616,16 @@ form textarea{
         flex-direction: column;  
     }
 
+    #submit{
+        width: 25%;
+    }
+
     .contact-container{
         padding-top: 2rem;
     }
 
     .profile {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .address img{
@@ -623,7 +638,7 @@ form textarea{
 
     .socials{
         align-items:flex-start;
-        font-size: 15px;
+        font-size: 16px;
     }
 
 

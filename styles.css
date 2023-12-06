@@ -118,7 +118,6 @@ li a:hover {
     justify-content: center;
     align-items: center;
     transition: transform .2s;
-    margin-bottom: 10px;
 }
 
 .resume a{
@@ -179,7 +178,7 @@ li a:hover {
 }
 
 #project{
-    background: #EEEEEE;
+    background: #393E46;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
@@ -201,6 +200,13 @@ li a:hover {
     gap: 2rem;
 }
 
+.project-container{
+    background: #EEEEEE;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
 .project > a img{
     max-width: 100%;
     border-radius: 12px;
@@ -216,6 +222,9 @@ li a:hover {
 .projectDescription{
     color: #393E46;
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #About{
